@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>에브리타임 내 혐오표현 실태 및 대학생 인식 조사</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen py-8 px-4 sm:px-6 lg:px-8">
+
+  <div class="max-w-2xl mx-auto">
+    <!-- Header / 안내문 -->
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 sm:p-8 mb-6">
+      <div class="inline-block px-3 py-1 bg-red-50 text-red-600 rounded-full text-xs font-semibold tracking-wide uppercase mb-3">
+        Academic Research Survey
+      </div>
+      <h1 class="text-xl sm:text-2xl font-bold text-slate-900 leading-snug">
+        에브리타임 내 혐오표현 실태 및<br class="hidden sm:inline"> 대학생 인식 조사
+      </h1>
+      
+      <div class="mt-4 pt-4 border-t border-slate-100 text-sm text-slate-600 space-y-2 leading-relaxed">
+        <p><strong>설문 안내</strong></p>
+        <p>안녕하세요. 본 설문은 대학생의 에브리타임 이용 경험과 혐오표현에 대한 인식을 알아보기 위해 실시합니다.</p>
+        <p>설문 참여는 자발적이며, 응답은 <strong>연구 목적으로만 활용</strong>합니다. 개인을 식별할 수 있는 정보(이름, 이메일, 학번 등)는 수집하지 않으며, 원하지 않는 질문에는 언제든 응답을 중단할 수 있습니다.</p>
+        <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 text-xs text-slate-700 mt-3">
+          <span class="font-semibold text-slate-900">※ 본 설문에서 혐오표현 정의:</span> 성별, 출신 지역, 국적, 인종, 장애, 외모, 성적 지향 등을 이유로 개인이나 집단을 비하하거나 차별하는 표현을 의미합니다.
+        </div>
+      </div>
+    </div>
+
+    <!-- Survey Form -->
+    <form id="surveyForm" class="space-y-6">
+
+      <!-- SECTION A -->
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 sm:p-8 space-y-6">
+        <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+          <span class="w-2 h-5 bg-red-500 rounded-full"></span>
+          A. 일반적 특성
+        </h2>
+
+        <!-- Q1 -->
+        <div class="space-y-3">
+          <label class="block text-sm font-semibold text-slate-900">
+            1. 현재 몇 학년입니까? <span class="text-red-500">*</span>
+          </label>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+            <label class="option-card"><input type="radio" name="q1" value="1학년" required><span>1학년</span></label>
+            <label class="option-card"><input type="radio" name="q1" value="2학년"><span>2학년</span></label>
+            <label class="option-card"><input type="radio" name="q1" value="3학년"><span>3학년</span></label>
+            <label class="option-card"><input type="radio" name="q1" value="4학년"><span>4학년</span></label>
+            <label class="option-card col-span-2 sm:col-span-2"><input type="radio" name="q1" value="5학년 이상"><span>5학년 이상</span></label>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="space-y-3 pt-4 border-t border-slate-100">
+          <label class="block text-sm font-semibold text-slate-900">
+            2. 성별은 무엇입니까? <span class="text-red-500">*</span>
+          </label>
+          <div class="grid grid-cols-2 gap-2.5">
+            <label class="option-card"><input type="radio" name="q2" value="남성" required><span>남성</span></label>
+            <label class="option-card"><input type="radio" name="q2" value="여성"><span>여성</span></label>
+            <label class="option-card"><input type="radio" name="q2" value="기타"><span>기타</span></label>
+            <label class="option-card"><input type="radio" name="q2" value="응답하고 싶지 않음"><span>응답하고 싶지 않음</span></label>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="space-y-3 pt-4 border-t border-slate-100">
+          <label class="block text-sm font-semibold text-slate-900">
+            3. 소속 단과대학은 어디입니까? <span class="text-red-500">*</span>
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            <label class="option-card"><input type="radio" name="q3" value="인문사회과학대학" required><span>인문사회과학대학</span></label>
+            <label class="option-card"><input type="radio" name="q3" value="자연과학대학"><span>자연과학대학</span></label>
+            <label class="option-card"><input type="radio" name="q3" value="경영대학"><span>경영대학</span></label>
+            <label class="option-card"><input type="radio" name="q3" value="공과대학"><span>공과대학</span></label>
+            <label class="option-card"><input type="radio" name="q3" value="수산과학대학"><span>수산과학대학</span></label>
+            <label class="option-card"><input type="radio" name="q3" value="환경·해양대학"><span>환경·해양대학</span></label>
+            <label class="option-card"><input type="radio" name="q3" value="정보융합대학"><span>정보융합대학</span></label>
+            <label class="option-card"><input type="radio" name="q3" value="미래융합대학"><span>미래융합대학</span></label>
+            <label class="option-card col-span-1 sm:col-span-2"><input type="radio" name="q3" value="기타"><span>기타</span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION B -->
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 sm:p-8 space-y-6">
+        <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+          <span class="w-2 h-5 bg-red-500 rounded-full"></span>
+          B. 에브리타임 이용 현황
+        </h2>
+
+        <!-- Q4 -->
+        <div class="space-y-3">
+          <label class="block text-sm font-semibold text-slate-900">
+            4. 최근 1년 동안 에브리타임을 이용한 적이 있습니까? <span class="text-red-500">*</span>
+          </label>
+          <div class="grid grid-cols-2 gap-2.5">
+            <label class="option-card"><input type="radio" name="q4" value="있다" required onchange="handleQ4Change(this.value)"><span>있다</span></label>
+            <label class="option-card"><input type="radio" name="q4" value="없다" onchange="handleQ4Change(this.value)"><span>없다</span></label>
+          </div>
+          <p id="q4Notice" class="hidden text-xs text-amber-600 bg-amber-50 p-2.5 rounded-lg border border-amber-200 mt-2">
+            ℹ️ '없다'를 선택하셨으므로 이용 관련 문항(5~12번)을 건너뛰고 인식 조사(13번)로 바로 이동합니다.
+          </p>
+        </div>
+
+        <!-- Section B sub: Q5, Q6 (최근 1년 이용자 전용) -->
+        <div id="sectionBSub" class="space-y-6 pt-4 border-t border-slate-100">
+          <!-- Q5 -->
+          <div class="space-y-3">
+            <label class="block text-sm font-semibold text-slate-900">
+              5. 최근 1년 동안 에브리타임을 얼마나 자주 이용했습니까? <span class="text-red-500">*</span>
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              <label class="option-card"><input type="radio" name="q5" value="거외 매일"><span>거의 매일</span></label>
+              <label class="option-card"><input type="radio" name="q5" value="일주일에 3~5일"><span>일주일에 3~5일</span></label>
+              <label class="option-card"><input type="radio" name="q5" value="일주일에 1~2일"><span>일주일에 1~2일</span></label>
+              <label class="option-card"><input type="radio" name="q5" value="한 달에 몇 번 이하"><span>한 달에 몇 번 이하</span></label>
+            </div>
+          </div>
+
+          <!-- Q6 -->
+          <div class="space-y-3 pt-4 border-t border-slate-100">
+            <label class="block text-sm font-semibold text-slate-900">
+              6. 에브리타임을 주로 어떤 목적으로 이용합니까? <span class="text-xs font-normal text-slate-500">(복수 선택)</span> <span class="text-red-500">*</span>
+            </label>
+            <div class="grid grid-cols-1 gap-2.5">
+              <label class="checkbox-card"><input type="checkbox" name="q6" value="학사·수업 정보 확인"><span>학사·수업 정보 확인</span></label>
+              <label class="checkbox-card"><input type="checkbox" name="q6" value="학교생활 관련 질문과 정보 공유"><span>학교생활 관련 질문과 정보 공유</span></label>
+              <label class="checkbox-card"><input type="checkbox" name="q6" value="자유게시판 등 게시글·댓글 이용"><span>자유게시판 등 게시글·댓글 이용</span></label>
+              <label class="checkbox-card"><input type="checkbox" name="q6" value="중고거래·구인·구직"><span>중고거래·구인·구직</span></label>
+              <label class="checkbox-card"><input type="checkbox" name="q6" value="시간표 관리"><span>시간표 관리</span></label>
+              <label class="checkbox-card"><input type="checkbox" name="q6" value="기타"><span>기타</span></label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION C -->
+      <div id="sectionC" class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 sm:p-8 space-y-6">
+        <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+          <span class="w-2 h-5 bg-red-500 rounded-full"></span>
+          C. 혐오표현 목격 및 경험
+        </h2>
+
+        <!-- Q7 -->
+        <div class="space-y-3">
+          <label class="block text-sm font-semibold text-slate-900">
+            7. 최근 1년 동안 에브리타임에서 혐오표현을 본 적이 있습니까? <span class="text-red-500">*</span>
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            <label class="option-card"><input type="radio" name="q7" value="자주 보았다" onchange="handleQ7Change(this.value)"><span>자주 보았다</span></label>
+            <label class="option-card"><input type="radio" name="q7" value="가끔 보았다" onchange="handleQ7Change(this.value)"><span>가끔 보았다</span></label>
+            <label class="option-card"><input type="radio" name="q7" value="드물게 보았다" onchange="handleQ7Change(this.value)"><span>드물게 보았다</span></label>
+            <label class="option-card"><input type="radio" name="q7" value="본 적 없다" onchange="handleQ7Change(this.value)"><span>본 적 없다</span></label>
+            <label class="option-card col-span-1 sm:col-span-2"><input type="radio" name="q7" value="기억나지 않는다" onchange="handleQ7Change(this.value)"><span>기억나지 않는다</span></label>
+          </div>
+          <p id="q7Notice" class="hidden text-xs text-amber-600 bg-amber-50 p-2.5 rounded-lg border border-amber-200 mt-2">
+            ℹ️ '본 적 없다' 또는 '기억나지 않는다'를 선택하셨으므로 상세 경험 문항(8~12번)을 건너뛰고 인식 조사(13번)로 바로 이동합니다.
+          </p>
+        </div>
+
+        <!-- Section C sub: Q8~Q12 (혐오표현 목격자 전용) -->
+        <div id="sectionCSub" class="space-y-6 pt-4 border-t border-slate-100">
+          
+          <!-- Q8: 배타적 체크박스 구현 -->
+          <div class="space-y-3">
+            <div class="flex justify-between items-baseline">
+              <label class="block text-sm font-semibold text-slate-900">
+                8. 어떤 혐오표현을 보았습니까? <span class="text-xs font-normal text-slate-500">(복수 선택)</span> <span class="text-red-500">*</span>
+              </label>
+            </div>
+            <p class="text-xs text-slate-500">※ '기억나지 않음'을 선택하면 다른 항목이 자동 해제됩니다.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              <label class="checkbox-card"><input type="checkbox" name="q8" value="성별에 대한 비하" class="q8-general" onchange="handleExclusiveCheckbox('q8', '기억나지 않음', this)"><span>성별에 대한 비하</span></label>
+              <label class="checkbox-card"><input type="checkbox" name="q8" value="특정 지역에 대한 비하" class="q8-general" onchange="handleExclusiveCheckbox('q8', '기억나지 않음', this)"><span>특정 지역에 대한 비하</span></label>
+              <label class="checkbox-card"><input type="checkbox" name="q8" value="국적·인종에 대한 비하" class="q8-general" onchange="handleExclusiveCheckbox('q8', '기억나지 않음', this)"><span>국적·인종에 대한 비하</span></label>
+              <label class="checkbox-card"><input type="checkbox" name="q8" value="장애에 대한 비하" class="q8-general" onchange="handleExclusiveCheckbox('q8', '기억나지 않음', this)"><span>장애에 대한 비하</span></label>
+              <label class="checkbox-card"><input type="checkbox" name="q8" value="외모·신체적 특성에 대한 비하" class="q8-general" onchange="handleExclusiveCheckbox('q8', '기억나지 않음', this)"><span>외모·신체적 특성에 대한 비하</span></label>
+              <label class="checkbox-card"><input type="checkbox" name="q8" value="성적 지향에 대한 비하" class="q8-general" onchange="handleExclusiveCheckbox('q8', '기억나지 않음', this)"><span>성적 지향에 대한 비하</span></label>
+              <label class="checkbox-card"><input type="checkbox" name="q8" value="기타" class="q8-general" onchange="handleExclusiveCheckbox('q8', '기억나지 않음', this)"><span>기타</span></label>
+              <label class="checkbox-card border-amber-200 bg-amber-50/40"><input type="checkbox" name="q8" value="기억나지 않음" class="q8-exclusive font-medium" onchange="handleExclusiveCheckbox('q8', '기억나지 않음', this)"><span class="text-amber-800">기억나지 않음 (단독)</span></label>
+            </div>
+          </div>
+
+          <!-- Q9: 배타적 체크박스 구현 -->
+          <div class="space-y-3 pt-4 border-t border-slate-100">
+            <label class="block text-sm font-semibold text-slate-900">
+              9. 주로 어느 게시판에서 혐오표현을 보았습니까? <span class="text-xs font-normal text-slate-500">(복수 선택)</span> <span class="text-red-500">*</span>
+            </label>
+            <p class="text-xs text-slate-500">※ '기억나지 않음'을 선택하면 다른 항목이 자동 해제됩니다.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              <label class="checkbox-card"><input type="checkbox" name="q9" value="자유게시판" class="q9-general" onchange="handleExclusiveCheckbox('q9', '기억나지 않음', this)"><span>자유게시판</span></label>
+              <label class="checkbox-card"><input type="checkbox" name="q9" value="비밀게시판" class="q9-general" onchange="handleExclusiveCheckbox('q9', '기억나지 않음', this)"><span>비밀게시판</span></label>
+              <label class="checkbox-card"><input type="checkbox" name="q9" value="새내기게시판" class="q9-general" onchange="handleExclusiveCheckbox('q9', '기억나지 않음', this)"><span>새내기게시판</span></label>
+              <label class="checkbox-card"><input type="checkbox" name="q9" value="기타 게시판" class="q9-general" onchange="handleExclusiveCheckbox('q9', '기억나지 않음', this)"><span>기타 게시판</span></label>
+              <label class="checkbox-card col-span-1 sm:col-span-2 border-amber-200 bg-amber-50/40"><input type="checkbox" name="q9" value="기억나지 않음" class="q9-exclusive" onchange="handleExclusiveCheckbox('q9', '기억나지 않음', this)"><span class="text-amber-800">기억나지 않음 (단독)</span></label>
+            </div>
+          </div>
+
+          <!-- Q10 -->
+          <div class="space-y-3 pt-4 border-t border-slate-100">
+            <label class="block text-sm font-semibold text-slate-900">
+              10. 혐오표현을 보았을 때 주로 어떻게 대응했습니까? <span class="text-red-500">*</span>
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              <label class="option-card"><input type="radio" name="q10" value="신고했다"><span>신고했다</span></label>
+              <label class="option-card"><input type="radio" name="q10" value="반박 댓글을 작성했다"><span>반박 댓글을 작성했다</span></label>
+              <label class="option-card"><input type="radio" name="q10" value="주변 사람에게 알렸다"><span>주변 사람에게 알렸다</span></label>
+              <label class="option-card"><input type="radio" name="q10" value="별다른 대응을 하지 않았다"><span>별다른 대응을 하지 않았다</span></label>
+              <label class="option-card"><input type="radio" name="q10" value="기타"><span>기타</span></label>
+              <label class="option-card"><input type="radio" name="q10" value="기억나지 않음"><span>기억나지 않음</span></label>
+            </div>
+          </div>
+
+          <!-- Q11 -->
+          <div class="space-y-3 pt-4 border-t border-slate-100">
+            <label class="block text-sm font-semibold text-slate-900">
+              11. 자신이나 자신이 속한 집단을 비하하는 표현을 본 적이 있습니까? <span class="text-red-500">*</span>
+            </label>
+            <div class="grid grid-cols-3 gap-2.5">
+              <label class="option-card"><input type="radio" name="q11" value="있다"><span>있다</span></label>
+              <label class="option-card"><input type="radio" name="q11" value="없다"><span>없다</span></label>
+              <label class="option-card"><input type="radio" name="q11" value="잘 모르겠다"><span>잘 모르겠다</span></label>
+            </div>
+          </div>
+
+          <!-- Q12 -->
+          <div class="space-y-3 pt-4 border-t border-slate-100">
+            <label class="block text-sm font-semibold text-slate-900">
+              12. 혐오표현을 보고 얼마나 불쾌했습니까? <span class="text-red-500">*</span>
+            </label>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+              <label class="option-card"><input type="radio" name="q12" value="전혀 불쾌하지 않았다"><span>① 전혀 불쾌하지 않음</span></label>
+              <label class="option-card"><input type="radio" name="q12" value="별로 불쾌하지 않았다"><span>② 별로 불쾌하지 않음</span></label>
+              <label class="option-card"><input type="radio" name="q12" value="보통이었다"><span>③ 보통이었다</span></label>
+              <label class="option-card"><input type="radio" name="q12" value="불쾌했다"><span>④ 불쾌했다</span></label>
+              <label class="option-card"><input type="radio" name="q12" value="매우 불쾌했다"><span>⑤ 매우 불쾌했다</span></label>
+              <label class="option-card bg-slate-50 text-slate-500"><input type="radio" name="q12" value="기억나지 않는다"><span>기억나지 않는다</span></label>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SECTION D -->
+      <div id="sectionD" class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 sm:p-8 space-y-6">
+        <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+          <span class="w-2 h-5 bg-red-500 rounded-full"></span>
+          D. 혐오표현에 대한 인식 및 개선방안
+        </h2>
+
+        <!-- Q13 -->
+        <div class="space-y-3">
+          <label class="block text-sm font-semibold text-slate-900">
+            13. 에브리타임의 혐오표현이 대학생의 편견이나 차별을 키울 수 있다고 생각합니까? <span class="text-red-500">*</span>
+          </label>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+            <label class="option-card"><input type="radio" name="q13" value="전혀 그렇지 않다" required><span>① 전혀 그렇지 않다</span></label>
+            <label class="option-card"><input type="radio" name="q13" value="그렇지 않다"><span>② 그렇지 않다</span></label>
+            <label class="option-card"><input type="radio" name="q13" value="보통이다"><span>③ 보통이다</span></label>
+            <label class="option-card"><input type="radio" name="q13" value="그렇다"><span>④ 그렇다</span></label>
+            <label class="option-card"><input type="radio" name="q13" value="매우 그렇다"><span>⑤ 매우 그렇다</span></label>
+            <label class="option-card bg-slate-50 text-slate-500"><input type="radio" name="q13" value="잘 모르겠다"><span>잘 모르겠다</span></label>
+          </div>
+        </div>
+
+        <!-- Q14 -->
+        <div class="space-y-3 pt-4 border-t border-slate-100">
+          <label class="block text-sm font-semibold text-slate-900">
+            14. 에브리타임에서 혐오표현이 적절하게 관리되고 있다고 생각합니까? <span class="text-red-500">*</span>
+          </label>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+            <label class="option-card"><input type="radio" name="q14" value="전혀 그렇지 않다" required><span>① 전혀 그렇지 않다</span></label>
+            <label class="option-card"><input type="radio" name="q14" value="그렇지 않다"><span>② 그렇지 않다</span></label>
+            <label class="option-card"><input type="radio" name="q14" value="보통이다"><span>③ 보통이다</span></label>
+            <label class="option-card"><input type="radio" name="q14" value="그렇다"><span>④ 그렇다</span></label>
+            <label class="option-card"><input type="radio" name="q14" value="매우 그렇다"><span>⑤ 매우 그렇다</span></label>
+            <label class="option-card bg-slate-50 text-slate-500"><input type="radio" name="q14" value="잘 모르겠다"><span>잘 모르겠다</span></label>
+          </div>
+        </div>
+
+        <!-- Q15 -->
+        <div class="space-y-3 pt-4 border-t border-slate-100">
+          <label class="block text-sm font-semibold text-slate-900">
+            15. 에브리타임에서 혐오표현이 발생하는 가장 큰 이유는 무엇이라고 생각합니까? <span class="text-red-500">*</span>
+          </label>
+          <div class="grid grid-cols-1 gap-2.5">
+            <label class="option-card"><input type="radio" name="q15" value="익명성으로 인한 책임감 부족" required><span>익명성으로 인한 책임감 부족</span></label>
+            <label class="option-card"><input type="radio" name="q15" value="혐오표현에 대한 인식 부족"><span>혐오표현에 대한 인식 부족</span></label>
+            <label class="option-card"><input type="radio" name="q15" value="신고와 제재 부족"><span>신고와 제재 부족</span></label>
+            <label class="option-card"><input type="radio" name="q15" value="집단 간 갈등과 편견"><span>집단 간 갈등과 편견</span></label>
+            <label class="option-card"><input type="radio" name="q15" value="자극적인 게시물에 대한 관심"><span>자극적인 게시물에 대한 관심</span></label>
+            <label class="option-card"><input type="radio" name="q15" value="기타"><span>기타</span></label>
+            <label class="option-card bg-slate-50 text-slate-500"><input type="radio" name="q15" value="잘 모르겠다"><span>잘 모르겠다</span></label>
+          </div>
+        </div>
+
+        <!-- Q16 -->
+        <div class="space-y-3 pt-4 border-t border-slate-100">
+          <label class="block text-sm font-semibold text-slate-900">
+            16. 에브리타임의 혐오표현을 줄이기 위해 가장 필요한 방법은 무엇이라고 생각합니까? <span class="text-red-500">*</span>
+          </label>
+          <div class="grid grid-cols-1 gap-2.5">
+            <label class="option-card"><input type="radio" name="q16" value="신고와 제재 강화" required><span>신고와 제재 강화</span></label>
+            <label class="option-card"><input type="radio" name="q16" value="혐오표현 자동 탐지 및 게시물 관리"><span>혐오표현 자동 탐지 및 게시물 관리</span></label>
+            <label class="option-card"><input type="radio" name="q16" value="이용자 인식 개선 캠페인"><span>이용자 인식 개선 캠페인</span></label>
+            <label class="option-card"><input type="radio" name="q16" value="커뮤니티 이용 규칙 강화"><span>커뮤니티 이용 규칙 강화</span></label>
+            <label class="option-card"><input type="radio" name="q16" value="대학의 디지털 시민교육"><span>대학의 디지털 시민교육</span></label>
+            <label class="option-card"><input type="radio" name="q16" value="추가 조치가 필요하지 않음"><span>추가 조치가 필요하지 않음</span></label>
+            <label class="option-card"><input type="radio" name="q16" value="기타"><span>기타</span></label>
+            <label class="option-card bg-slate-50 text-slate-500"><input type="radio" name="q16" value="잘 모르겠다"><span>잘 모르겠다</span></label>
+          </div>
+        </div>
+
+        <!-- Q17 -->
+        <div class="space-y-3 pt-4 border-t border-slate-100">
+          <label class="block text-sm font-semibold text-slate-900">
+            17. 에브리타임의 혐오표현에 관한 경험이나 개선 의견이 있다면 자유롭게 작성해 주십시오. 
+            <span class="text-xs font-normal text-slate-400">(선택)</span>
+          </label>
+          <p class="text-xs text-slate-500">※ 본인의 심리적 불편을 초래할 수 있는 구체적인 피해 경험은 작성하지 않으셔도 되며, 자유로운 생각이나 정책 제안 위주로 편하게 적어주세요.</p>
+          <textarea name="q17" rows="4" placeholder="자유롭게 의견을 남겨주세요." 
+            class="w-full rounded-xl border border-slate-300 p-3.5 text-sm focus:border-red-500 focus:ring-2 focus:ring-red-100 outline-none transition"></textarea>
+        </div>
+
+      </div>
+
+      <!-- Submit Button -->
+      <div class="pt-2">
+        <button type="submit" id="submitBtn" 
+          class="w-full py-4 px-6 bg-red-600 hover:bg-red-700 active:scale-[0.99] text-white font-bold rounded-2xl shadow-lg shadow-red-200 transition duration-150 flex items-center justify-center gap-2 text-base">
+          <span>설문 제출하기</span>
+        </button>
+      </div>
+
+    </form>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="hidden fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+      <div class="bg-white rounded-3xl p-8 max-w-sm w-full text-center shadow-2xl border border-slate-100 space-y-4">
+        <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto text-2xl font-bold">
+          ✓
+        </div>
+        <h3 class="text-xl font-bold text-slate-900">제출이 완료되었습니다</h3>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          귀중한 시간을 내어 설문에 참여해 주셔서 진심으로 감사드립니다.<br>응답은 연구 목적으로 소중히 활용됩니다.
+        </p>
+        <button onclick="window.location.reload()" 
+          class="w-full py-3 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-xl font-semibold text-sm transition">
+          창 닫기
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <style>
+    .option-card, .checkbox-card {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.85rem 1rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 0.85rem;
+      font-size: 0.875rem;
+      color: #334155;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      user-select: none;
+    }
+    .option-card:hover, .checkbox-card:hover {
+      background-color: #f8fafc;
+      border-color: #cbd5e1;
+    }
+    .option-card:has(input:checked), .checkbox-card:has(input:checked) {
+      background-color: #fef2f2;
+      border-color: #f87171;
+      color: #991b1b;
+      font-weight: 500;
+    }
+    input[type="radio"], input[type="checkbox"] {
+      accent-color: #dc2626;
+      width: 1.05rem;
+      height: 1.05rem;
+      flex-shrink: 0;
+    }
+  </style>
+
+  <script>
+    // ==========================================
+    // ⚠️ [설정] 구글 Apps Script 웹앱 배포 URL을 여기에 입력하세요
+    // ==========================================
+    const GOOGLE_SCRIPT_URL = "YOUR_GOOGLE_APPS_SCRIPT_WEBAPP_URL_HERE";
+
+    // 4번 분기 처리: '없다' 선택 시 B하위, C섹션 숨김
+    function handleQ4Change(val) {
+      const secBSub = document.getElementById('sectionBSub');
+      const secC = document.getElementById('sectionC');
+      const q4Notice = document.getElementById('q4Notice');
+
+      if (val === '없다') {
+        secBSub.classList.add('hidden');
+        secC.classList.add('hidden');
+        q4Notice.classList.remove('hidden');
+        clearInputs(secBSub);
+        clearInputs(secC);
+      } else {
+        secBSub.classList.remove('hidden');
+        secC.classList.remove('hidden');
+        q4Notice.classList.add('hidden');
+      }
+    }
+
+    // 7번 분기 처리: '본 적 없다' 또는 '기억나지 않는다' 선택 시 C하위 숨김
+    function handleQ7Change(val) {
+      const secCSub = document.getElementById('sectionCSub');
+      const q7Notice = document.getElementById('q7Notice');
+
+      if (val === '본 적 없다' || val === '기억나지 않는다') {
+        secCSub.classList.add('hidden');
+        q7Notice.classList.remove('hidden');
+        clearInputs(secCSub);
+      } else {
+        secCSub.classList.remove('hidden');
+        q7Notice.classList.add('hidden');
+      }
+    }
+
+    // 영역 내 입력값 초기화
+    function clearInputs(container) {
+      container.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(el => {
+        el.checked = false;
+      });
+      container.querySelectorAll('textarea, input[type="text"]').forEach(el => {
+        el.value = '';
+      });
+    }
+
+    // 상호 배타적 체크박스 로직 (핵심 기능)
+    // '기억나지 않음'을 누르면 다른 일반 체크박스를 모두 해제하고,
+    // 일반 체크박스를 누르면 '기억나지 않음'을 해제합니다.
+    function handleExclusiveCheckbox(groupName, exclusiveValue, clickedEl) {
+      const checkboxes = document.querySelectorAll(`input[name="${groupName}"]`);
+      if (clickedEl.value === exclusiveValue && clickedEl.checked) {
+        // 배타 항목 선택됨 -> 나머지 일반 항목 전부 체크 해제
+        checkboxes.forEach(cb => {
+          if (cb.value !== exclusiveValue) {
+            cb.checked = false;
+          }
+        });
+      } else if (clickedEl.value !== exclusiveValue && clickedEl.checked) {
+        // 일반 항목 선택됨 -> 배타 항목 체크 해제
+        checkboxes.forEach(cb => {
+          if (cb.value === exclusiveValue) {
+            cb.checked = false;
+          }
+        });
+      }
+    }
+
+    // 폼 제출 이벤트 핸들러
+    document.getElementById('surveyForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const q4Val = document.querySelector('input[name="q4"]:checked')?.value;
+      const q7Val = document.querySelector('input[name="q7"]:checked')?.value;
+
+      // 유효성 검사 (표시된 문항 필수 입력 확인)
+      if (q4Val === '있다') {
+        if (!document.querySelector('input[name="q5"]:checked')) {
+          alert('5번 문항(이용 빈도)에 응답해 주십시오.');
+          return;
+        }
+        const q6Checked = document.querySelectorAll('input[name="q6"]:checked');
+        if (q6Checked.length === 0) {
+          alert('6번 문항(이용 목적)을 하나 이상 선택해 주십시오.');
+          return;
+        }
+
+        if (!q7Val) {
+          alert('7번 문항(혐오표현 목격 여부)에 응답해 주십시오.');
+          return;
+        }
+
+        if (q7Val !== '본 적 없다' && q7Val !== '기억나지 않는다') {
+          const q8Checked = document.querySelectorAll('input[name="q8"]:checked');
+          if (q8Checked.length === 0) {
+            alert('8번 문항(목격한 혐오표현)을 하나 이상 선택해 주십시오.');
+            return;
+          }
+          const q9Checked = document.querySelectorAll('input[name="q9"]:checked');
+          if (q9Checked.length === 0) {
+            alert('9번 문항(목격 게시판)을 하나 이상 선택해 주십시오.');
+            return;
+          }
+          if (!document.querySelector('input[name="q10"]:checked')) {
+            alert('10번 문항(대응 방식)에 응답해 주십시오.');
+            return;
+          }
+          if (!document.querySelector('input[name="q11"]:checked')) {
+            alert('11번 문항(비하 표현 목격 여부)에 응답해 주십시오.');
+            return;
+          }
+          if (!document.querySelector('input[name="q12"]:checked')) {
+            alert('12번 문항(불쾌감 정도)에 응답해 주십시오.');
+            return;
+          }
+        }
+      }
+
+      // 데이터 직렬화
+      const formData = new FormData(this);
+      const payload = {
+        timestamp: new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' }),
+        q1: formData.get('q1') || '',
+        q2: formData.get('q2') || '',
+        q3: formData.get('q3') || '',
+        q4: formData.get('q4') || '',
+        q5: formData.get('q5') || '',
+        q6: formData.getAll('q6'),
+        q7: formData.get('q7') || '',
+        q8: formData.getAll('q8'),
+        q9: formData.getAll('q9'),
+        q10: formData.get('q10') || '',
+        q11: formData.get('q11') || '',
+        q12: formData.get('q12') || '',
+        q13: formData.get('q13') || '',
+        q14: formData.get('q14') || '',
+        q15: formData.get('q15') || '',
+        q16: formData.get('q16') || '',
+        q17: formData.get('q17') || ''
+      };
+
+      const submitBtn = document.getElementById('submitBtn');
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>제출 중입니다...</span>';
+
+      try {
+        if (GOOGLE_SCRIPT_URL === "YOUR_GOOGLE_APPS_SCRIPT_WEBAPP_URL_HERE") {
+          console.log("Mock Submit Payload:", payload);
+          // URL 미설정 시 데모 모드로 모달 오픈
+          setTimeout(() => {
+            document.getElementById('successModal').classList.remove('hidden');
+          }, 600);
+          return;
+        }
+
+        // 구글 Apps Script로 데이터 전송
+        await fetch(GOOGLE_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors', // CORS 제한 우회
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        document.getElementById('successModal').classList.remove('hidden');
+      } catch (err) {
+        alert('제출 도중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.');
+        console.error(err);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span>설문 제출하기</span>';
+      }
+    });
+  </script>
+</body>
+</html>
